@@ -21,13 +21,13 @@ namespace Smartphone.API.Controllers
                 {
                     Id = 1,
                     Brand = "First Smartphone",
-                    DOB = DataTime.Now.AddYears(-20)
+                    DOB = Datatime.Now.AddYears(-20)
                 },
                 new Smartphones.API.Models.Smartphone()
                 {
                     Id = 2,
                     Brand = "Second Smartphone",
-                    DOB = DataTime.Now.AddYears(-20)
+                    DOB = Datatime.Now.AddYears(-20)
                 },
             };
 
@@ -41,7 +41,7 @@ namespace Smartphone.API.Controllers
             {
                 Id = 1,
                 Brand = "First Smartphone",
-                DOB = DataTime.Now.AddYears(-20)
+                DOB = Datatime.Now.AddYears(-20)
             };
 
             return Ok(newSmartphone);

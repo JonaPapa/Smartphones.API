@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Smartphones.API.Dto;
-
+using System;
 using System.Reflection;
 
 namespace Smartphone.API.Controllers
@@ -21,13 +21,13 @@ namespace Smartphone.API.Controllers
                 {
                     Id = 1,
                     Brand = "First Smartphone",
-                    DOB = Datatime.Now.AddYears(-20)
+                    LaunchingYear = DateTime.Now.AddYears(-20)
                 },
                 new Smartphones.API.Models.Smartphone()
                 {
                     Id = 2,
                     Brand = "Second Smartphone",
-                    DOB = Datatime.Now.AddYears(-20)
+                    LaunchingYear = DateTime.Now.AddYears(-20)
                 },
             };
 
@@ -37,11 +37,11 @@ namespace Smartphone.API.Controllers
         [HttpGet("GetById/{id}")]
         public IActionResult GetSmartphoneById(int id)
         {
-            var newSmartphone = new Models.Smartphone()
+            var newSmartphone = new Smartphones.API.Models.Smartphone()
             {
                 Id = 1,
                 Brand = "First Smartphone",
-                DOB = Datatime.Now.AddYears(-20)
+                LaunchingYear = DateTime.Now.AddYears(-20)
             };
 
             return Ok(newSmartphone);

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Smartphone.API.Dto;
+using Smartphones.API.Dto;
 
 using System.Reflection;
 
@@ -15,19 +15,19 @@ namespace Smartphone.API.Controllers
         public IActionResult GetSmartphones()
         {
             //List of Smartphones
-            var allSmartphones = new List<Smartphone.API.Models.Smartphone>()
+            var allSmartphones = new List<Smartphones.API.Models.Smartphone>()
             {
-                new Smartphone.API.Models.Smartphone()
+                new Smartphones.API.Models.Smartphone()
                 {
                     Id = 1,
                     Brand = "First Smartphone",
-                    LY = LauchingYear.Now.AddYears(-20)
+                    DOB = DataTime.Now.AddYears(-20)
                 },
-                new Smartphone.API.Models.Smartphone()
+                new Smartphones.API.Models.Smartphone()
                 {
                     Id = 2,
                     Brand = "Second Smartphone",
-                    LY = LauchingYear.Now.AddYears(-20)
+                    DOB = DataTime.Now.AddYears(-20)
                 },
             };
 
@@ -41,7 +41,7 @@ namespace Smartphone.API.Controllers
             {
                 Id = 1,
                 Brand = "First Smartphone",
-                LY = LauchingYear.Now.AddYears(-20)
+                DOB = DataTime.Now.AddYears(-20)
             };
 
             return Ok(newSmartphone);
